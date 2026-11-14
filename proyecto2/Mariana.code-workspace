@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../Escritorio/Mariana"
+		},
+		{
+			"path": "../Mariana"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "proyecto2"
+	}
+}

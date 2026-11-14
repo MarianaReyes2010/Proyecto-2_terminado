@@ -1,0 +1,141 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#7a183e;
+    min-height:100vh;
+    padding:2rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+header h1{
+    font-family:cursive;
+    font-size:clamp(1.8rem, 4vw, 3rem);
+    color:#f3f8f8;
+}
+
+header p{
+    color:#deb2f0;
+    margin-top:.5rem;
+    font-size:clamp(.9rem, 2vw, 1.1rem);
+}
+
+/* SLIDER LAYOUT */
+.slider{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1rem;
+    width:100%;
+}
+
+/* CONTAINER */
+.slider-container{
+    width:100%;
+    max-width:520px;
+    position:relative;
+}
+
+/* CARTEL */
+.cartel{
+    display:none;
+    background:#bff7e4;
+    border:10px solid #441334;
+    padding:1.5rem;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(255, 255, 255, 0.25);
+}
+
+.cartel.active{
+    display:block;
+    animation:fade .4s ease;
+}
+
+.cartel h2{
+    font-family:fantasy;
+    font-size:clamp(1.5rem, 3vw, 2.5rem);
+    margin-bottom:1rem;
+}
+.cartel img{
+    width:100%;
+    height:auto;
+    max-height:420px;
+    object-fit:cover;
+    border:5px solid #831f38;
+}
+
+.cartel h3{
+    margin:1rem 0;
+    font-size:clamp(1.2rem, 3vw, 2rem);
+    color:#4b174b;
+}
+
+.cartel p{
+    line-height:1.6;
+    margin-bottom:1rem;
+    font-size:clamp(.9rem, 2vw, 1rem);
+}
+
+.cartel span{
+    display:block;
+    font-size:clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight:bold;
+    color:rgb(139, 0, 116);
+    border-top:2px dashed #65266b;
+    padding-top:1rem;
+}
+
+/* BOTONES */
+.btn{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:2rem;
+    cursor:pointer;
+    background:#52266b;
+    color:rgb(247, 225, 192);
+    transition:.3s;
+    flex-shrink:0;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* ANIMACION */
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateX(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE BREAKPOINTS
+   ========================= */
+
+/* TABLET */
+@media (max-width: 900px){
+    body{
+        padding:1.5rem;
+    }
+
+    .slider-container{
+        max-width:90%;
+    }
+}
